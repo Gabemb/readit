@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var Post = sequelize.define('Post', {
+  const Post = sequelize.define('Post', {
     title: {
       type: DataTypes.STRING,
       validate: {
@@ -8,12 +8,17 @@ module.exports = function(sequelize, DataTypes) {
      }
    },
     body: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      validate: {
+      len: [1, 2000]
+      }
     },
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        Post.hasOne(models.Vote)
+        Post.hasMany(models.Comment)
       }
     }
   });

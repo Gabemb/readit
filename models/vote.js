@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var Vote = sequelize.define('Vote', {
+  const Vote = sequelize.define('Vote', {
     total: {
       type: DataTypes.INTEGER,
       validate: {

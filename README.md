@@ -23,8 +23,8 @@ Today we'll be using the `sequelize cli` to make a Reddit clone. However we won'
 * `GET` / `POST` / `DELETE` for `/api/vote`
 
 ## Frontend
-* Display page for all Comments
-* Display page for single Comment
+* Display page for all Posts
+* Display page for single Post
 * Make a Post form
 * Make a Comment form for a Post
 * Upvote button / Downvote button for each Post

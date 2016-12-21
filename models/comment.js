@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var Comment = sequelize.define('Comment', {
+  const Comment = sequelize.define('Comment', {
     body: {
       type: DataTypes.STRING,
       validate: {
